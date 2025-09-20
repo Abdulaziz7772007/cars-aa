@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../css/output.css">
+</head>
+<body class="bg-gray-100">
+	
+	
+	<section class="py-14">
+		<div class="container mx-auto px-5 scale-0 transition-transform duration-2000" id="detailsWrapper">
+			<a href="../index.html" class="btn btn-neutral mb-5">⬅Orqaga</a>
+			<h1 class="text-4xl font-medium mb-3" id="detailsTitle"></h1>
+			<p id="detailsDescription" class="mb-6 text-xl"></p>
+			<h2 class="font-medium text-3xl mb-3">Xususiyatlari</h2>
+			<p class="flex items-center gap-1 mb-1">
+				Pozitsiyasi :
+				<strong id="detailsTrim"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Avlodi :
+				<strong id="detailsGeneration"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Yili :
+				<strong id="detailsYear"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Rangi :
+				<span class="w-10 h-4 inline-block" id="detailsColor"></span>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Rang nomi :
+				<strong id="detailsColorName"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Kategoriya :
+				<strong id="detailsCategory"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Eshiklar soni :
+				<strong id="detailsDoorCount"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				O'rindiqlar soni :
+				<strong id="detailsSeatCount"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Tezligi :
+				<strong id="detailsMaxSpeed"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Tezlanish :
+				<strong id="detailsAcceleration"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Motor turi :
+				<strong id="detailsEngine"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Ot kuchi :
+				<strong id="detailsHorsePower"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-1">
+				Yonilg'i :
+				<strong id="detailsFuelType"></strong>
+			</p>
+			<p class="flex items-center gap-1 mb-5">
+				Davlat :
+				<strong id="detailsCountry"></strong>
+			</p>
+			<h3 class="text-3xl mb-3">Yonilg'i sarfi:</h3>
+			<div class="tabs tabs-lift">
+				<input type="radio" name="my_tabs_3" class="tab" aria-label="Shahar" checked="checked" />
+				<div class="tab-content bg-base-100 border-base-300 p-6" id="detailsCity"></div>
+
+				<input type="radio" name="my_tabs_3" class="tab" aria-label="Trassa"  />
+				<div class="tab-content bg-base-100 border-base-300 p-6" id="detailsHighway"></div>
+
+				<input type="radio" name="my_tabs_3" class="tab" aria-label="Aralash" />
+				<div class="tab-content bg-base-100 border-base-300 p-6" id="detailsCombined"></div>
+			</div>
+
+			
+		</div>
+		<div class="flex items-center justify-center fixed inset-0 bg-accent" id="detailsLoading">
+			<span class="loading loading-dots loading-xl"></span>
+		</div>
+	</section>
+
+	<script src="../js/details.js" type="module"></script>
+</body>
+</html>

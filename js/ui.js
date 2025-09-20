@@ -16,10 +16,10 @@ export function ui(cars) {
 		const infoEl = clone.querySelector('.js-info')
 
 		// Id
-
-	editEl.id=car.id
-	deleteEl.id = car.id
-	infoEl.id = car.id
+		infoEl.href = `../pages/details.html?id=${car.id}`
+		editEl.id=car.id
+		deleteEl.id = car.id
+		infoEl.id = car.id
 		
 		
 
