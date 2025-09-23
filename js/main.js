@@ -1,6 +1,6 @@
 import { checkAuth } from './check-auth.js'
 import { BASE_URL, LOADER_COUNT } from './constants.js'
-import { cardLoaderEl, cardSkeletonLoaderEl, infoModalEl, loginLogoutButtonEl } from './html-selection.js'
+import { cardContainerEl, cardLoaderEl, cardSkeletonLoaderEl, infoModalEl, loginLogoutButtonEl, selectCategoryEl, selectCountryEl } from './html-selection.js'
 import { ui } from './ui.js'
 
 if(checkAuth()) {
@@ -75,6 +75,76 @@ loginLogoutButtonEl.addEventListener("click", ()=> {
 	}
 
 })
+
+
+selectCountryEl.onchange = function (event) {
+	const selectCountry = event.target.value; 
+	cardContainerEl.innerHTML = ''; 
+	loader(true);
+	if(selectCountry !== 'all') {
+		return fetch(BASE_URL + `/cars?country=${selectCountry}`)
+			.then((res) => {
+				return res.json()
+			})
+			.then((res) => {
+				ui(res.data)
+			})
+			.catch(()=> {
+				alert("Hatolik!!!")
+			})
+			.finally(() => {
+				loader(false)
+			})
+	}
+	fetch(BASE_URL + "/cars")
+		.then((res) => {
+			return res.json()
+		})
+		.then((res) => {
+			ui(res.data)
+		})
+		.catch(()=> {
+			alert("Hatolik!!!")
+		})
+		.finally(() => {
+			loader(false)
+		})
+}
+
+
+selectCategoryEl.onchange = function (event) {
+	const selectCategory = event.target.value; 
+	cardContainerEl.innerHTML = ''; 
+	loader(true);
+	if(selectCategory !== 'all') {
+		return fetch(BASE_URL + `/cars?category=${selectCategory}`)
+			.then((res) => {
+				return res.json()
+			})
+			.then((res) => {
+				ui(res.data)
+			})
+			.catch(()=> {
+				alert("Hatolik!!!")
+			})
+			.finally(() => {
+				loader(false)
+			})
+	}
+	fetch(BASE_URL + "/cars")
+		.then((res) => {
+			return res.json()
+		})
+		.then((res) => {
+			ui(res.data)
+		})
+		.catch(()=> {
+			alert("Hatolik!!!")
+		})
+		.finally(() => {
+			loader(false)
+		})
+}
 
 // Start
 init()

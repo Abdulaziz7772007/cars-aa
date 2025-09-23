@@ -7,7 +7,6 @@ const cardContainerEl = document.getElementById('cardContainer')
 const loginLogoutButtonEl = document.getElementById('loginLogoutButton')
 const selectCountryEl = document.getElementById('selectCountry')
 const selectCategoryEl = document.getElementById('selectCategory')
-const selectColorEl = document.getElementById('selectColor')
 
 // Elemente Details
 const detailsTitleEl  = document.getElementById('detailsTitle')
@@ -61,5 +60,4 @@ detailsHighwayEl,
 detailsCombinedEl,
 selectCountryEl,
 selectCategoryEl,
-selectColorEl,
 }
