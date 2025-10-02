@@ -5,8 +5,10 @@ const cardSkeletonLoaderEl = document.getElementById('cardSkletonTemplate')
 // Elements
 const cardContainerEl = document.getElementById('cardContainer')
 const loginLogoutButtonEl = document.getElementById('loginLogoutButton')
-const selectCountryEl = document.getElementById('selectCountry')
-const selectCategoryEl = document.getElementById('selectCategory')
+const filterTypenEl = document.getElementById('filterType')
+const filterLoaderEl = document.getElementById('filterLoader')
+const filtersEl = document.getElementById('filters')
+const clearButtonEl = document.getElementById('clearButton')
 
 // Elemente Details
 const detailsTitleEl  = document.getElementById('detailsTitle')
@@ -30,6 +32,14 @@ const detailsCountryEl  = document.getElementById('detailsCountry')
 const detailsCityEl  = document.getElementById('detailsCity')
 const detailsHighwayEl  = document.getElementById('detailsHighway')
 const detailsCombinedEl  = document.getElementById('detailsCombined')
+const filterSelectValueEl  = document.getElementById('filterSelectValue')
+
+
+// elements login
+
+const loginFormEl = document.getElementById('form')
+const registerFormEl = document.getElementById('registerForm');
+
 
 // Loaders
 const cardLoaderEl = document.getElementById('cardLoader')
@@ -58,6 +68,11 @@ detailsCountryEl,
 detailsCityEl,
 detailsHighwayEl,
 detailsCombinedEl,
-selectCountryEl,
-selectCategoryEl,
+filterTypenEl,
+filterLoaderEl,
+filtersEl,
+filterSelectValueEl,
+clearButtonEl,
+loginFormEl,
+registerFormEl,
 }
